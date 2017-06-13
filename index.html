@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>连连看</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style>
+		.table{display: table;}
+		.row{display: table-row;}
+		.cell{display: table-cell;padding: 5px;}
+		.lable{text-align: right;}
+		</style>
+	</head>
+	<body>
+		<center>
+			
+			<div id="whole">
+				<div id="gamePanel" tabindex="0">
+					<div id="pieces">
+					</div>
+				</div>
+				<div id="gameLogo">
+				</div>			
+				<div id="scorePanel">
+					<span>分数</span>
+					<input id="setData" type="button" value="保存"/>
+					<input id="getData" type="button" value="排行"/>
+				</div>
+				<div id="score">
+					<span>0</span>
+				</div>
+				<div id="timePanel">
+					<span>时间</span>
+				</div>
+				<div id="time">
+					<span>0</span>
+				</div>
+				<div id="button">
+					<input id="start" type="button" onclick="Start();" value="开始"></input>
+					<input id="reset" type="button" onclick="Reset();"value="重置"></input>					
+					<input id="rank" type="button" onclick="Rank();"value="请输入"></input>
+					<input type="text" id="username" name="username" placeholder="用户名"/><br/>
+					<input type="password" id="password" name="password" placeholder="密码"><br/>
+					<input id="login" type="button" onclick="Login();" value="登录"></input>
+					<input id="register" type="button" onclick="Register();" value="注册"></input>
+		<label>提示框</label><br/>
+		<textarea id="txt_showCookie" placeholder="cookie显示区域" rows="2" cols="15">
+					</textarea>	
+				</div>
+				
+			</div>
+			
+		</center>
+			<form id="fruitform" method="post" action="http://127.0.0.1:8080/form">
+			<div class="lable">
+			<div class="row">
+			<div class="cell lable">data1:</div>
+			<div class="cell"><input name="apples" value="0" /></div>
+			</div>
+			<div class="row">
+			<div class="cell lable">data2:</div>
+			<div class="cell"><input name="bananas" value="0" /></div>
+			</div>
+			<div class="row">
+			<div class="cell lable">data3:</div>
+			<div class="cell"><input name="cherries" value="0" /></div>
+			</div>
+			<div class="row">
+			<div class="cell lable">Welcome:</div>
+			<div id="results" class="cell"></div>
+			</div>
+			</div>
+			<button id="submit" type="submit">Save to Serve</button>
+			</form>
+		<script type="text/javascript" src="js/map.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/piece.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/game.js" charset="UTF-8"></script>
+	
+		
+	</body>
+</html>
